@@ -39,6 +39,8 @@ const MovieCard = ({
 	const [movie, setMovie] = useState<Movie | null>(null);
 	const [userRating, setUserRating] = useState(0);
 
+	console.log(movie);
+
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -124,8 +126,8 @@ const MovieCard = ({
 				)}
 				{!isLoadingMovie && !errorMovie && (
 					<>
-						<DialogHeader className='flex gap-4'>
-							<div className='rounded-md overflow-hidden h-[300px] w-[340px] mb-2'>
+						<DialogHeader className='flex flex-col sm:flex-row justify-center items-center sm:items-start gap-4'>
+							<div className='rounded-md overflow-hidden h-[300px] w-[200px] sm:w-[340px] mb-2'>
 								<img
 									src={movie?.Poster}
 									alt='movie'
@@ -149,10 +151,7 @@ const MovieCard = ({
 							</div>
 						</DialogHeader>
 						<div className='grid gap-4 py-4 text-white italic'>
-							After being held captive in an Afghan cave, billionaire engineer
-							Tony Stark creates a unique weaponized suit of armor to fight
-							evil. Starring Robert Downey Jr., Gwyneth Paltrow, Terrence Howard
-							Directed by Jon Favreau
+							{movie?.Plot}
 						</div>
 						<DialogFooter className='flex flex-col space-y-2 items-center'>
 							<StarRating
