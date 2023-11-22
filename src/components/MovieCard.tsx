@@ -103,7 +103,7 @@ const MovieCard = ({
 		<Dialog>
 			<DialogTrigger asChild>
 				<Card
-					className=' cursor-pointer h-[350px] max-w-full'
+					className='cursor-pointer h-[350px] max-w-full'
 					onClick={() => setSelectedMovieId(id)}>
 					<CardHeader className='p-3'>
 						<div className='rounded-md overflow-hidden h-[200px] w-full mb-2'>
@@ -127,7 +127,7 @@ const MovieCard = ({
 				{!isLoadingMovie && !errorMovie && (
 					<>
 						<DialogHeader className='flex flex-col sm:flex-row justify-center items-center sm:items-start gap-4'>
-							<div className='rounded-md overflow-hidden h-[300px] w-[200px] sm:w-[340px] mb-2'>
+							<div className='rounded-md overflow-hidden h-[200px] sm:h-[320px] w-[130px] sm:w-[340px] mb-2'>
 								<img
 									src={movie?.Poster}
 									alt='movie'
