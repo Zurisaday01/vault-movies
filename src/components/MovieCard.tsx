@@ -118,7 +118,7 @@ const MovieCard = ({
 					<CardContent className='p-3'>{year}</CardContent>
 				</Card>
 			</DialogTrigger>
-			<DialogContent className='sm:max-w-[500px]'>
+			<DialogContent className='sm:max-w-[500px] h-[100vh] overflow-y-auto'>
 				{isLoadingMovie && !errorMovie && (
 					<div className='flex-1 flex items-center justify-center'>
 						<Loader />
