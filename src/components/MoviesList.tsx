@@ -37,7 +37,10 @@ const MoviesList = ({
 					<MovieCard
 						key={movie.imdbID}
 						id={movie.imdbID}
-						poster={movie.Poster}
+						poster={
+							movie.Poster ||
+							'https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg'
+						}
 						title={movie.Title}
 						year={movie.Year}
 						watchedMovies={watchedMovies}
