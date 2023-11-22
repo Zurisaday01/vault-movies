@@ -45,7 +45,7 @@ const MovieCard = ({
 				setIsLoadingMovie(true);
 				setErrorMovie('');
 				const res = await fetch(
-					`http://www.omdbapi.com/?apikey=${process.env.MOVIES_API_KEY}&i=${selectedMovieId}`
+					`https://www.omdbapi.com/?apikey=${process.env.MOVIES_API_KEY}&i=${selectedMovieId}`
 				);
 
 				if (!res.ok) throw new Error('😢 Something went wrong fetching movie');
