@@ -7,6 +7,7 @@ export default defineConfig(({ mode }) => {
 	return {
 		define: {
 			'process.env.MOVIES_API_KEY': JSON.stringify(env.MOVIES_API_KEY),
+			__APP_ENV__: JSON.stringify(env.MOVIES_API_KEY),
 		},
 		plugins: [react()],
 		resolve: {
